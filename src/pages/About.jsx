@@ -1,22 +1,31 @@
 function About() {
   return (
     <>
-      <h1>ABOUT US</h1>
-      <div>
-        <h2>We are:</h2>
+      <main className="aboutMe">
+        <h2>I am:</h2>
         <p>
-          Info about who you are and why you started this and how you started!
+          I am a friendly person with a passion in the design industry, I love
+          to 3D model and I am really enjoying making and desiging websites.
+          Apart from this industry I have a few hobbies like:
         </p>
+        <ul>
+          <li>Tennis</li>
+          <li>Badminton</li>
+          <li>Cycling</li>
+          <li>Football</li>
+        </ul>
 
-        <h2>Our Goals:</h2>
-        <p>Info on what you want to achieve</p>
+        <h2>My Goal:</h2>
+        <p>To become a web developer, making great websites</p>
 
-        <h3>Product Creation:</h3>
-        <p>
-          Info on the general process of making or how you get the product from
-          start to finish!
-        </p>
-      </div>
+        <h2>Other Interests:</h2>
+        <p>I have also have Interests in:</p>
+        <ul>
+          <li>Socialising with friends and family</li>
+          <li>Extra-curricular</li>
+          <li>Volunteer at the Church of St. Michael and Martin in Hounslow</li>
+        </ul>
+      </main>
     </>
   );
 }

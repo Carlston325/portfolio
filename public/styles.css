@@ -3,6 +3,17 @@ body {
   margin: 0;
   z-index: -1;
 }
+#root {
+  background-color: rgba(255, 255, 255, 0.9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root * {
+  width: 90%;
+  margin: 0 auto;
+}
 
 .btn {
   font-variant: small-caps;
@@ -15,15 +26,69 @@ body {
   font-variant: small-caps;
 }
 
-#root {
-  background-color: rgba(255, 255, 255, 0.9);
+h1 {
+  margin: 40px !important;
+  font-size: 60px;
+}
+
+.card {
+  background-color: rgb(255, 211, 116);
+  width: 40% !important;
+  /* height: 200px; */
+  margin: 50px auto !important;
+  padding: 25px 15px;
+  box-shadow: 0 2px 5px #ccc;
+  border-radius: 25px;
+  position: relative;
+  text-align: left;
+}
+.top {
+  border-radius: 25px 25px 0 0;
+  height: 100px;
+  width: 100% !important;
+  background-color: rgb(255, 193, 60);
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
+}
+.name {
+  font-size: 2em;
+  color: #2d3436;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 4% 20px !important;
+}
+.card img {
+  margin: 30px 20px 0 0 !important;
+}
+.circle-img {
+  border-radius: 50%;
+  border: 7px solid #fff;
+  width: 120px !important;
+  height: 120px;
+}
+.bottom {
+  margin-top: 120px !important;
+}
+.info {
+  color: #1a7e76;
+  width: 100% !important;
+  margin: 20px 0 !important;
+}
+.avatarImg {
+  border-radius: 50% !important;
+  border: 4px solid #000000 !important;
+  width: 120px !important;
+  height: 120px !important;
+}
+#root > main > div:nth-child(3) > div {
+  display: flex;
   align-items: center;
 }
-#root * {
-  width: 90%;
-  margin: 0 auto;
+#root > main > div:nth-child(3) > div > a:nth-child(2) {
+  width: 100%;
 }
 
 /* HEADER */
@@ -33,7 +98,7 @@ header * {
 }
 header {
   color: #000000;
-  display: grid;
+  display: flex;
   grid-template-columns: 2fr repeat(4, 1fr);
   justify-items: center;
   align-items: center;
@@ -42,8 +107,15 @@ header {
   font-variant: small-caps;
 }
 header > h2 {
+  flex: 2;
   justify-self: start;
   font-size: 30px;
+}
+header > div {
+  flex: 1;
+}
+header > a {
+  flex: 1;
 }
 header > a > button {
   padding: 5px !important;
@@ -93,105 +165,106 @@ div.drpdwnContent > a:hover > button {
 }
 
 /* BODY */
-main {
+.homepage {
   display: flex;
   flex-direction: column;
 }
-main > .hero {
+.homepage > .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(150px, 300px) 1fr;
   justify-items: center;
 }
-main > .hero > h1 {
+.homepage > .hero > h1 {
   margin: 10px !important;
   grid-area: 1/1/2/3;
   align-self: center;
   font-size: 60px;
 }
-main > .hero > img {
+.homepage > .hero > img {
   max-width: 380px !important;
   margin: 14px !important;
   border: 2px solid black;
   border-radius: 50%;
 }
-main > .hero > .profile {
+.homepage > .hero > .profile {
   width: auto !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main > .hero > .profile * {
+.homepage > .hero > .profile * {
   font-size: 20px;
   font-style: italic;
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
 }
-main > .hero > .profile > div {
+.homepage > .hero > .profile > div {
   margin: 20px 0px !important;
   display: flex;
   gap: 10px;
 }
-main > .hero > div > div > .links > a {
+.homepage > .hero > div > div > .links > a {
   margin: 4px !important;
   display: block;
   width: fit-content !important;
 }
-main > .hero > div > div > .links > a > svg {
+.homepage > .hero > div > div > .links > a > svg {
   height: 30px;
 }
-main > .hero > div > div > .skills > img {
+.homepage > .hero > div > div > .skills > img {
   width: 40px !important;
   height: 40px;
   margin: 4px !important;
 }
-main > .hero > div > div > .skills > p {
+.homepage > .hero > div > div > .skills > p {
   font-size: 16px;
   font-style: normal;
   font-weight: 900;
 }
 
-main > .myProjects {
+.homepage > .myProjects {
   width: 100% !important;
+  margin-bottom: 100px !important;
   margin-top: 220px !important;
   display: grid;
-  gap: 1%;
-  grid-template-rows: 0fr 6fr 6fr;
+  gap: 4%;
+  grid-template-rows: 0fr 6fr auto;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
   text-align: center;
 }
-main > .myProjects > a {
+.homepage > .myProjects > a {
   grid-area: 1/1/2/3;
   margin: 14px auto !important;
   text-align: start;
 }
-main > .myProjects > a > button.btn {
+.homepage > .myProjects > a > button.btn {
   background-color: transparent;
   width: auto !important;
   border: none;
   font-size: 25px;
   font-weight: 700 !important;
 }
-main > div.myProjects > a > button.btn:hover {
+.homepage > div.myProjects > a > button.btn:hover {
   color: rgb(45, 103, 209);
   background-color: transparent !important;
 }
-main > .myProjects > .project {
+.homepage > .myProjects > .project {
   width: 100% !important;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main > .myProjects > .project > img {
+.homepage > .myProjects > .project > img {
   grid-area: 1/1/2/2;
   width: 410px !important;
   height: 350px;
 }
-main > .myProjects > .project > div {
+.homepage > .myProjects > .project > div {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -202,12 +275,18 @@ main > .myProjects > .project > div {
 footer {
   color: rgb(255, 193, 60);
   width: 100% !important;
-  margin-top: 20px !important;
-  padding: 10px !important;
-  position: relative;
-  left: 0;
-  bottom: 0;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
   text-align: center;
+}
+
+/* ABOUT ME */
+.aboutMe {
+  margin: 20px auto !important;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* RESPONSIVE WEB */
@@ -224,9 +303,9 @@ footer {
   main > .myProjects {
     width: 100% !important;
     margin-top: 220px !important;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
   }
   main > .myProjects > .project {
     flex-direction: row;
@@ -236,7 +315,7 @@ footer {
     height: 300px;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 660px) {
   main > .myProjects > .project {
     flex-direction: column;
   }
@@ -254,6 +333,16 @@ footer {
   #root {
     margin: 0 auto;
     width: 110%;
+  }
+  header {
+    display: grid;
+  }
+  header > div {
+    grid-area: 1/5/2/6;
+  }
+  #root > main > div.myProjects > div > img {
+    width: inherit !important;
+    height: inherit !important;
   }
 }
 

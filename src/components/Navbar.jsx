@@ -33,27 +33,29 @@ function Navbar(props) {
         <h2>Carlston Rebelo</h2>
         {width <= 680 ? (
           <>
-            <MenuIcon
-              className="drpdwn"
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-            />
-            <div
-              className="drpdwnContent"
-              style={customStyle}
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-            >
-              <Button btnPath="" btnName="Home" />
-              <Button btnPath="projects" btnName="Projects" />
-              <Button btnPath="about" btnName="About us" />
-              <Button btnPath="contact" btnName="Contact us" />
+            <div>
+              <MenuIcon
+                className="drpdwn"
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              />
+              <div
+                className="drpdwnContent"
+                style={customStyle}
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
+                <Button btnPath="" btnName="Home" />
+                {/* <Button btnPath="projects" btnName="Projects" /> */}
+                <Button btnPath="about" btnName="About us" />
+                <Button btnPath="contact" btnName="Contact us" />
+              </div>
             </div>
           </>
         ) : (
           <>
             <Button btnPath="" btnName="Home" />
-            <Button btnPath="projects" btnName="Projects" />
+            {/* <Button btnPath="projects" btnName="Projects" /> */}
             <Button btnPath="about" btnName="About us" />
             <Button btnPath="contact" btnName="Contact us" />
           </>

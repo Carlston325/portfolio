@@ -5,7 +5,7 @@ import Add_Project from "../components/Add_Project";
 
 function Home() {
   return (
-    <main>
+    <main className="homepage">
       {/* intro */}
       <div className="hero">
         <h1>Front-end React Developer</h1>
@@ -53,18 +53,6 @@ function Home() {
           prjctTitle="Project 2"
           prjctDscrp="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
           prjctPath="project_two"
-        />
-        <Add_Project
-          imgSrc="project thumbnail"
-          prjctTitle="Project 3"
-          prjctDscrp="This is a website for a ...."
-          prjctPath="project_three"
-        />
-        <Add_Project
-          imgSrc="project thumbnail"
-          prjctTitle="Project 4"
-          prjctDscrp="This is a website for a ...."
-          prjctPath="project_four"
         />
       </div>
 
