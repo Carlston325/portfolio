@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-function Add_Project(props) {
+function AddProject(props) {
   return (
     <div className="project">
       <img src={props.imgSrc} alt="project thumbnail" />
@@ -13,4 +13,4 @@ function Add_Project(props) {
   );
 }
 
-export default Add_Project;
+export default AddProject;

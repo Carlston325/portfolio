@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Add_Project from "../components/Add_Project";
+import AddProject from "../components/AddProject";
 
 function Home() {
   return (
@@ -40,26 +40,21 @@ function Home() {
 
       {/* my projects */}
       <div className="myProjects">
-        <Button btnPath="projects" btnName="Projects" />
+        <Button btnPath="/projects" btnName="Projects" />
 
-        <Add_Project
+        <AddProject
           imgSrc="./images/thumbnails/ecommerce_thumbnail.png"
           prjctTitle="Ecommerce"
           prjctDscrp="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-          prjctPath="ecommerce"
+          prjctPath="/ecommerce"
         />
-        <Add_Project
+        <AddProject
           imgSrc="./images/thumbnails/weather_app_thumbnail.png"
           prjctTitle="Project 2"
           prjctDscrp="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-          prjctPath="project_two"
+          prjctPath="https://github.com/Carlston325/weather-react"
         />
       </div>
-
-      {/* about me */}
-      {/* <div className="aboutMe">
-        <h2>About me</h2>
-      </div> */}
     </main>
   );
 }

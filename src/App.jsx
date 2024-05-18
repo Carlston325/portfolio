@@ -8,10 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
-import Project_one from "./pages/Ecommerce";
-import Project_two from "./pages/Project_two";
-import Project_three from "./pages/Project_three";
-import Project_four from "./pages/Project_four";
+import Ecommerce from "./pages/Ecommerce";
 
 function App() {
   const [screenSize, setScreenSize] = useState({
@@ -41,10 +38,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/ecommerce" element={<Project_one />} />
-          <Route path="/project_two" element={<Project_two />} />
-          <Route path="/project_three" element={<Project_three />} />
-          <Route path="/project_four" element={<Project_four />} />
+          <Route path="/ecommerce" element={<Ecommerce />} />
         </Routes>
         <Footer />
       </Router>
