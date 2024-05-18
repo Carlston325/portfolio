@@ -4,17 +4,19 @@ body {
   z-index: -1;
 }
 
-#btnHighlight {
-  color: #4e3d00 !important;
-  background-color: #ffd027 !important;
-  padding: 5px !important;
+.btn {
+  font-variant: small-caps;
+}
+.btn:hover {
+  color: #4e3d00;
+  background-color: #ffd027;
   border-radius: 50px;
   font-weight: 900;
   font-variant: small-caps;
 }
+
 #root {
   background-color: rgba(255, 255, 255, 0.9);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +24,6 @@ body {
 #root * {
   width: 90%;
   margin: 0 auto;
-  /* padding: 10px; */
 }
 
 /* HEADER */
@@ -44,7 +45,6 @@ header > h2 {
   justify-self: start;
   font-size: 30px;
 }
-
 header > a > button {
   padding: 5px !important;
   font-size: 10px;
@@ -52,6 +52,44 @@ header > a > button {
   border: 0;
   font-weight: 900;
   text-transform: uppercase;
+}
+.drpdwn {
+  grid-area: 1/5/2/6;
+}
+.drpdwnContent {
+  background-color: #ffffff;
+  width: 140px !important;
+  height: 140px;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.drpdwnContent > a {
+  width: 100% !important;
+  padding: 0;
+  margin: 0 !important;
+}
+.drpdwnContent > a > button {
+  padding: 5px !important;
+  font-size: 10px;
+  background-color: #ffeba200;
+  border: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+div.drpdwnContent > a:hover {
+  background-color: #e1e1e1;
+  padding: 0;
+}
+div.drpdwnContent > a:hover > button {
+  background-color: #e1e1e1;
+  border-radius: 0;
 }
 
 /* BODY */
@@ -68,11 +106,11 @@ main > .hero {
 main > .hero > h1 {
   margin: 10px !important;
   grid-area: 1/1/2/3;
-  align-self: flex-end;
+  align-self: center;
   font-size: 60px;
 }
 main > .hero > img {
-  max-width: 100% !important;
+  max-width: 380px !important;
   margin: 14px !important;
   border: 2px solid black;
   border-radius: 50%;
@@ -115,31 +153,109 @@ main > .hero > div > div > .skills > p {
 }
 
 main > .myProjects {
-  margin-top: 20px !important;
+  width: 100% !important;
+  margin-top: 220px !important;
+  display: grid;
+  gap: 1%;
+  grid-template-rows: 0fr 6fr 6fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+main > .myProjects > a {
+  grid-area: 1/1/2/3;
+  margin: 14px auto !important;
+  text-align: start;
+}
+main > .myProjects > a > button.btn {
+  background-color: transparent;
+  width: auto !important;
+  border: none;
+  font-size: 25px;
+  font-weight: 700 !important;
+}
+main > div.myProjects > a > button.btn:hover {
+  color: rgb(45, 103, 209);
+  background-color: transparent !important;
+}
+main > .myProjects > .project {
+  width: 100% !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main > .myProjects > .project > img {
+  grid-area: 1/1/2/2;
+  width: 410px !important;
+  height: 350px;
+}
+main > .myProjects > .project > div {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  justify-content: center;
 }
 
-/* 
+/* FOOTER */
 footer {
-  width: 96%;
-  padding: 2%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: fixed;
+  color: rgb(255, 193, 60);
+  width: 100% !important;
+  margin-top: 20px !important;
+  padding: 10px !important;
+  position: relative;
   left: 0;
   bottom: 0;
+  text-align: center;
 }
-.footer-card {
-  width: 200px;
-  flex-basis: 300px;
-  color: #fff1bf;
+
+/* RESPONSIVE WEB */
+@media (max-width: 1400px) {
+  main > .myProjects > .project {
+    flex-direction: column;
+  }
+  main > .myProjects > .project > img {
+    width: 400px !important;
+    height: 330px;
+  }
 }
-.copyright {
-  width: 100%;
-  padding: 0;
-  flex-basis: 200px;
-  color: #d8b844a8;
+@media (max-width: 900px) {
+  main > .myProjects {
+    width: 100% !important;
+    margin-top: 220px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  main > .myProjects > .project {
+    flex-direction: row;
+  }
+  main > .myProjects > .project > img {
+    width: 400px !important;
+    height: 300px;
+  }
 }
-*/
+@media (max-width: 630px) {
+  main > .myProjects > .project {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  #root {
+    width: 102%;
+  }
+  main > .myProjects > .project > img {
+    width: 160px !important;
+    height: 160px;
+  }
+}
+@media (max-width: 360px) {
+  #root {
+    margin: 0 auto;
+    width: 110%;
+  }
+}
+
+@media (max-width: 680px) {
+}
