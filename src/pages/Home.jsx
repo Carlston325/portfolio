@@ -44,13 +44,19 @@ function Home() {
 
         <AddProject
           imgSrc="./images/thumbnails/ecommerce_thumbnail.png"
-          prjctTitle="Ecommerce"
+          prjctTitle="Ecommerce website"
           prjctDscrp="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
           prjctPath="/ecommerce"
         />
         <AddProject
+          imgSrc="./images/thumbnails/tech_website.png"
+          prjctTitle="Technology product website"
+          prjctDscrp="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          prjctPath="https://github.com/Carlston325/techproduct"
+        />
+        <AddProject
           imgSrc="./images/thumbnails/weather_app_thumbnail.png"
-          prjctTitle="Project 2"
+          prjctTitle="Weather"
           prjctDscrp="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
           prjctPath="https://github.com/Carlston325/weather-react"
         />
